@@ -6,7 +6,7 @@ filegroup(
     visibility = ["//visibility:public"]
 )
 
-cmake_external(
+cmake(
    name = "seal",
    cmake_options = [
         "-DSEAL_USE_CXX17=ON",
@@ -17,13 +17,13 @@ cmake_external(
         "-DBUILD_SHARED_LIBS=OFF",
         "-DCMAKE_BUILD_TYPE=Release",
    ],
-   make_commands = [
-        "make -j",
-        "make install"
-   ],
+   #make_commands = [
+   #     "make -j",
+   #     "make install"
+   #],
    lib_source = ":src",
-   install_prefix = "native/src",
+   #install_prefix = "native/src",
    out_include_dir = "include/SEAL-3.5",
-   static_libraries = ["libseal-3.5.a"],
+   out_static_lib = ["libseal-3.5.a"],
    visibility = ["//visibility:public"],
 )
