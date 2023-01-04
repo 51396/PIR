@@ -8,7 +8,7 @@ filegroup(
 
 cmake(
    name = "seal",
-   cmake_options = [
+   cmake_entries = [
         "-DSEAL_USE_CXX17=ON",
         "-DSEAL_USE_INTRIN=ON",
         "-DSEAL_USE_MSGSL=OFF",
@@ -24,6 +24,6 @@ cmake(
    lib_source = ":src",
    #install_prefix = "native/src",
    out_include_dir = "include/SEAL-3.5",
-   out_static_lib = ["libseal-3.5.a"],
+   out_static_libs = ["libseal-3.5.a"],
    visibility = ["//visibility:public"],
 )
