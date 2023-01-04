@@ -8,15 +8,15 @@ filegroup(
 
 cmake(
    name = "seal",
-   cache_entries = [
-        "-DSEAL_USE_CXX17=ON",
-        "-DSEAL_USE_INTRIN=ON",
-        "-DSEAL_USE_MSGSL=OFF",
+   cache_entries = {
+        "SEAL_USE_CXX17=ON",
+        "SEAL_USE_INTRIN=ON",
+        "SEAL_USE_MSGSL=OFF",
         "-DSEAL_USE_ZLIB=OFF",
-        "-DSEAL_BUILD_TESTS=OFF",
-        "-DBUILD_SHARED_LIBS=OFF",
-        "-DCMAKE_BUILD_TYPE=Release",
-   ],
+        "SEAL_BUILD_TESTS=OFF",
+        "BUILD_SHARED_LIBS=OFF",
+        "CMAKE_BUILD_TYPE=Release",
+   },
    #make_commands = [
    #     "make -j",
    #     "make install"
