@@ -8,7 +8,7 @@ filegroup(
 
 cmake(
    name = "seal",
-   cmake_entries = [
+   cache_entries = [
         "-DSEAL_USE_CXX17=ON",
         "-DSEAL_USE_INTRIN=ON",
         "-DSEAL_USE_MSGSL=OFF",
