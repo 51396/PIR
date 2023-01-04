@@ -1,4 +1,4 @@
-load("@rules_foreign_cc//tools/build_defs:cmake.bzl", "cmake_external")
+load("@rules_foreign_cc//tools/foreign_cc:defs.bzl", "cmake")
 
 filegroup(
     name = "src", 
